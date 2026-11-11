@@ -3,337 +3,284 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Krishna — Developer portfolio blending traditional Indian heritage aesthetics with modern web craft. Terracotta, indigo, gold, and the spirit of karigari." />
+  <meta name="description" content="Krishna — Developer portfolio blending traditional Indian heritage with dynamic modern interaction." />
   <title>Krishna · Heritage Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Yatra+One&family=Poppins:wght@300;400;500;600;700&family=Teko:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Yatra+One&family=Poppins:wght@300;400;500;600;700&family=Teko:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🪷</text></svg>" />
 </head>
 <body>
-  <div class="bg-pattern" aria-hidden="true"></div>
-
-  <header class="site-header">
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursor-follower"></div>
+  <div class="bg-motifs" aria-hidden="true">
+    <div class="motif motif-1"></div>
+    <div class="motif motif-2"></div>
+    <div class="motif motif-3"></div>
+    <div class="motif motif-4"></div>
+  </div>
+  <div class="progress-bar" id="progress-bar"></div>
+  <header class="site-header" id="header">
     <div class="container header-inner">
-      <a href="#namaste" class="logo">
-        <span class="logo-mark" aria-hidden="true">
-          <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
-            <circle cx="18" cy="18" r="16" stroke="currentColor" stroke-width="1.5"/>
+      <a href="#namaste" class="logo magnetic">
+        <span class="logo-mark">
+          <svg width="32" height="32" viewBox="0 0 36 36" fill="none">
+            <circle cx="18" cy="18" r="15" stroke="currentColor" stroke-width="1.5"/>
             <path d="M18 8 L22 16 L18 14 L14 16 Z" fill="currentColor"/>
-            <circle cx="18" cy="20" r="3" fill="currentColor"/>
+            <circle cx="18" cy="20" r="2.5" fill="currentColor"/>
           </svg>
         </span>
         <span class="logo-text">Krishna</span>
       </a>
       <nav class="nav" id="nav">
-        <a href="#namaste" class="nav-link">Namaste</a>
-        <a href="#works" class="nav-link">Works</a>
-        <a href="#craft" class="nav-link">Craft</a>
-        <a href="#samvad" class="nav-link">Samvad</a>
+        <a href="#namaste" class="nav-link"><span>Namaste</span></a>
+        <a href="#works" class="nav-link"><span>Works</span></a>
+        <a href="#craft" class="nav-link"><span>Craft</span></a>
+        <a href="#samvad" class="nav-link"><span>Samvad</span></a>
       </nav>
-      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
+        <span></span><span></span>
       </button>
     </div>
   </header>
-
   <main>
-    <section id="namaste" class="section hero">
-      <div class="container hero-inner">
+    <section id="namaste" class="hero">
+      <div class="hero-bg"></div>
+      <div class="container hero-grid">
         <div class="hero-content">
-          <p class="eyebrow">नमस्ते · Namaste</p>
+          <div class="hero-eyebrow reveal">
+            <span class="eyebrow-line"></span>
+            <span>नमस्ते · Digital Karigar</span>
+          </div>
           <h1 class="hero-title">
-            I craft digital experiences<br />
-            <span class="accent">with the soul of tradition</span>
+            <span class="title-line reveal"><span>I craft digital</span></span>
+            <span class="title-line reveal"><span>experiences with the</span></span>
+            <span class="title-line reveal accent"><span>soul of tradition</span></span>
           </h1>
-          <p class="hero-lead">
-            A developer who believes code is a form of karigari — patient craftsmanship.
-            I blend modern engineering with the warmth, rhythm, and storytelling of Indian heritage.
+          <p class="hero-lead reveal">
+            Code as karigari. Interfaces as living craft.
+            Blending modern engineering with the warmth and rhythm of Indian heritage.
           </p>
-          <div class="hero-actions">
-            <a href="#works" class="btn btn-primary">Explore the Collection</a>
-            <a href="#samvad" class="btn btn-ghost">Start a Conversation</a>
+          <div class="hero-cta reveal">
+            <a href="#works" class="btn btn-primary magnetic">
+              <span>Explore Collection</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </a>
+            <a href="#samvad" class="btn btn-outline magnetic">
+              <span>Start Samvad</span>
+            </a>
           </div>
         </div>
-        <div class="hero-visual" aria-hidden="true">
-          <div class="heritage-frame">
-            <svg class="warli-scene" viewBox="0 0 320 280" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="260" cy="40" r="18" stroke="#C9A227" stroke-width="2"/>
-              <g stroke="#C9A227" stroke-width="1.5">
-                <line x1="260" y1="12" x2="260" y2="5"/>
-                <line x1="260" y1="68" x2="260" y2="75"/>
-                <line x1="232" y1="40" x2="225" y2="40"/>
-                <line x1="288" y1="40" x2="295" y2="40"/>
-                <line x1="240" y1="20" x2="235" y2="15"/>
-                <line x1="280" y1="20" x2="285" y2="15"/>
-                <line x1="240" y1="60" x2="235" y2="65"/>
-                <line x1="280" y1="60" x2="285" y2="65"/>
+        <div class="hero-visual reveal">
+          <div class="visual-card">
+            <div class="visual-glow"></div>
+            <svg class="warli-svg" viewBox="0 0 340 300" fill="none">
+              <g class="sun-group">
+                <circle cx="270" cy="45" r="20" stroke="#C9A227" stroke-width="2" fill="rgba(201,162,39,0.1)"/>
+                <g stroke="#C9A227" stroke-width="1.5" class="sun-rays">
+                  <line x1="270" y1="14" x2="270" y2="6"/>
+                  <line x1="270" y1="76" x2="270" y2="84"/>
+                  <line x1="239" y1="45" x2="231" y2="45"/>
+                  <line x1="301" y1="45" x2="309" y2="45"/>
+                  <line x1="248" y1="23" x2="242" y2="17"/>
+                  <line x1="292" y1="23" x2="298" y2="17"/>
+                  <line x1="248" y1="67" x2="242" y2="73"/>
+                  <line x1="292" y1="67" x2="298" y2="73"/>
+                </g>
               </g>
-              <path d="M60 160 L100 110 L140 160 Z" stroke="#3D2B1F" stroke-width="2" fill="#F5E6C8"/>
-              <rect x="75" y="160" width="50" height="45" stroke="#3D2B1F" stroke-width="2" fill="#E8D5B5"/>
-              <rect x="92" y="175" width="16" height="30" fill="#3D2B1F"/>
-              <line x1="200" y1="205" x2="200" y2="140" stroke="#1B4D3E" stroke-width="3"/>
-              <circle cx="200" cy="125" r="28" fill="#2E7D4F" opacity="0.85"/>
-              <circle cx="185" cy="135" r="18" fill="#1B4D3E" opacity="0.7"/>
-              <circle cx="215" cy="132" r="16" fill="#2E7D4F" opacity="0.7"/>
-              <g class="warli-people" stroke="#3D2B1F" stroke-width="2" fill="none">
-                <circle cx="50" cy="195" r="6"/>
-                <line x1="50" y1="201" x2="50" y2="230"/>
-                <line x1="50" y1="210" x2="35" y2="220"/>
-                <line x1="50" y1="210" x2="65" y2="220"/>
-                <line x1="50" y1="230" x2="40" y2="250"/>
-                <line x1="50" y1="230" x2="60" y2="250"/>
-                <circle cx="110" cy="200" r="6"/>
-                <line x1="110" y1="206" x2="110" y2="235"/>
-                <line x1="110" y1="215" x2="95" y2="225"/>
-                <line x1="110" y1="215" x2="125" y2="225"/>
-                <line x1="110" y1="235" x2="100" y2="255"/>
-                <line x1="110" y1="235" x2="120" y2="255"/>
-                <circle cx="160" cy="198" r="6"/>
-                <line x1="160" y1="204" x2="160" y2="233"/>
-                <line x1="160" y1="213" x2="145" y2="223"/>
-                <line x1="160" y1="213" x2="175" y2="223"/>
-                <line x1="160" y1="233" x2="150" y2="253"/>
-                <line x1="160" y1="233" x2="170" y2="253"/>
+              <path d="M55 165 L100 110 L145 165 Z" stroke="#3D2B1F" stroke-width="2" fill="#F5E6C8"/>
+              <rect x="72" y="165" width="56" height="50" stroke="#3D2B1F" stroke-width="2" fill="#E8D5B5"/>
+              <rect x="90" y="182" width="20" height="33" fill="#3D2B1F"/>
+              <line x1="210" y1="215" x2="210" y2="145" stroke="#1B4D3E" stroke-width="3.5"/>
+              <circle cx="210" cy="128" r="32" fill="#2E7D4F" opacity="0.9"/>
+              <circle cx="192" cy="140" r="20" fill="#1B4D3E" opacity="0.75"/>
+              <circle cx="228" cy="138" r="18" fill="#2E7D4F" opacity="0.7"/>
+              <g class="dancers" stroke="#3D2B1F" stroke-width="2.2" fill="none">
+                <g class="dancer d1">
+                  <circle cx="48" cy="200" r="7"/>
+                  <line x1="48" y1="207" x2="48" y2="240"/>
+                  <line x1="48" y1="218" x2="30" y2="230"/>
+                  <line x1="48" y1="218" x2="66" y2="230"/>
+                  <line x1="48" y1="240" x2="36" y2="262"/>
+                  <line x1="48" y1="240" x2="60" y2="262"/>
+                </g>
+                <g class="dancer d2">
+                  <circle cx="115" cy="205" r="7"/>
+                  <line x1="115" y1="212" x2="115" y2="245"/>
+                  <line x1="115" y1="223" x2="97" y2="235"/>
+                  <line x1="115" y1="223" x2="133" y2="235"/>
+                  <line x1="115" y1="245" x2="103" y2="267"/>
+                  <line x1="115" y1="245" x2="127" y2="267"/>
+                </g>
+                <g class="dancer d3">
+                  <circle cx="170" cy="202" r="7"/>
+                  <line x1="170" y1="209" x2="170" y2="242"/>
+                  <line x1="170" y1="220" x2="152" y2="232"/>
+                  <line x1="170" y1="220" x2="188" y2="232"/>
+                  <line x1="170" y1="242" x2="158" y2="264"/>
+                  <line x1="170" y1="242" x2="182" y2="264"/>
+                </g>
               </g>
-              <path d="M20 260 Q160 245 300 260" stroke="#C65D3B" stroke-width="1.5" opacity="0.6"/>
+              <path d="M20 275 Q170 255 320 275" stroke="#C65D3B" stroke-width="1.5" opacity="0.5"/>
             </svg>
-            <div class="frame-ornament top-left"></div>
-            <div class="frame-ornament top-right"></div>
-            <div class="frame-ornament bottom-left"></div>
-            <div class="frame-ornament bottom-right"></div>
+            <div class="card-corners"><span></span><span></span><span></span><span></span></div>
           </div>
         </div>
       </div>
-      <div class="scroll-hint" aria-hidden="true">
-        <span>Scroll</span>
-        <div class="scroll-line"></div>
+      <div class="scroll-indicator">
+        <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+        <span>Scroll to explore</span>
       </div>
     </section>
-
-    <section class="section intro">
-      <div class="container narrow">
-        <div class="section-label">The Story</div>
-        <h2 class="section-title">A warm welcome, not a résumé</h2>
-        <div class="intro-text">
-          <p>
-            In the tradition of the karigar — the artisan who pours quiet attention into every detail —
-            I approach software as a living craft. Lines of code are threads; systems are looms;
-            every interface is a place where people and intention meet.
-          </p>
-          <p>
-            My work is rooted in clarity and care. I draw inspiration from the patient geometry of
-            Warli, the storytelling of Madhubani, and the rhythmic borders of temple jali —
-            translating that spirit into digital products that feel considered, human, and lasting.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section id="works" class="section works">
+    <section class="intro-section">
       <div class="container">
-        <div class="section-header">
-          <div class="section-label">The Collection</div>
-          <h2 class="section-title">Selected Works</h2>
-          <p class="section-desc">Categorized in the spirit of traditional ateliers — Chitra for visual form, Kala for design systems, Katha for narrative case studies.</p>
+        <div class="intro-grid">
+          <div class="intro-label reveal">
+            <span class="section-num">01</span>
+            <span>The Story</span>
+          </div>
+          <div class="intro-body">
+            <h2 class="intro-title reveal">A warm welcome,<br/>not a résumé</h2>
+            <div class="intro-text reveal">
+              <p>In the tradition of the <em>karigar</em> — the artisan who pours quiet attention into every detail — I approach software as a living craft.</p>
+              <p>Lines of code are threads. Systems are looms. Every interface is a place where people and intention meet. I draw from Warli geometry, Madhubani storytelling, and temple jali rhythm — translating that spirit into digital products that feel considered and lasting.</p>
+            </div>
+          </div>
         </div>
-
-        <div class="filter-bar" role="tablist">
-          <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All</button>
-          <button class="filter-btn" data-filter="chitra" role="tab">Chitra</button>
-          <button class="filter-btn" data-filter="kala" role="tab">Kala</button>
-          <button class="filter-btn" data-filter="katha" role="tab">Katha</button>
+      </div>
+    </section>
+    <section id="works" class="works-section">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-label reveal">
+            <span class="section-num">02</span>
+            <span>The Collection</span>
+          </div>
+          <h2 class="section-title reveal">Selected Works</h2>
+          <p class="section-desc reveal">Chitra for visual form · Kala for systems · Katha for stories</p>
         </div>
-
+        <div class="filter-row reveal">
+          <button class="filter-chip active" data-filter="all"><span>All</span></button>
+          <button class="filter-chip" data-filter="chitra"><span>Chitra</span></button>
+          <button class="filter-chip" data-filter="kala"><span>Kala</span></button>
+          <button class="filter-chip" data-filter="katha"><span>Katha</span></button>
+        </div>
         <div class="works-grid" id="works-grid">
-          <article class="work-card" data-category="chitra kala">
-            <div class="work-image">
-              <div class="work-placeholder chitra-1"><span class="placeholder-label">UI · Visual</span></div>
-              <div class="work-overlay"><span class="work-tag">Chitra · Kala</span></div>
-            </div>
-            <div class="work-body">
-              <h3 class="work-title">Rangoli Commerce</h3>
-              <p class="work-desc">A festival-ready e-commerce experience with generative patterns and warm, tactile micro-interactions inspired by rangoli geometry.</p>
-              <div class="work-meta"><span>Next.js</span><span>Framer Motion</span><span>Design System</span></div>
-            </div>
+          <article class="work-card" data-category="chitra kala" data-index="1">
+            <div class="card-media"><div class="card-gradient g1"></div><div class="card-overlay"><span class="card-cat">Chitra · Kala</span><span class="card-view">View Project →</span></div></div>
+            <div class="card-info"><h3>Rangoli Commerce</h3><p>Festival-ready e-commerce with generative patterns and tactile micro-interactions inspired by rangoli geometry.</p><div class="card-tags"><span>Next.js</span><span>Motion</span><span>Design System</span></div></div>
           </article>
-
-          <article class="work-card" data-category="kala">
-            <div class="work-image">
-              <div class="work-placeholder kala-1"><span class="placeholder-label">System</span></div>
-              <div class="work-overlay"><span class="work-tag">Kala</span></div>
-            </div>
-            <div class="work-body">
-              <h3 class="work-title">Jali Design Tokens</h3>
-              <p class="work-desc">A comprehensive design-token library and component kit that brings geometric lattice patterns into modern product interfaces.</p>
-              <div class="work-meta"><span>Figma</span><span>CSS Custom Props</span><span>Storybook</span></div>
-            </div>
+          <article class="work-card" data-category="kala" data-index="2">
+            <div class="card-media"><div class="card-gradient g2"></div><div class="card-overlay"><span class="card-cat">Kala</span><span class="card-view">View Project →</span></div></div>
+            <div class="card-info"><h3>Jali Design Tokens</h3><p>Token library and component kit bringing geometric lattice patterns into modern product interfaces.</p><div class="card-tags"><span>Figma</span><span>CSS Vars</span><span>Storybook</span></div></div>
           </article>
-
-          <article class="work-card" data-category="katha">
-            <div class="work-image">
-              <div class="work-placeholder katha-1"><span class="placeholder-label">Case Study</span></div>
-              <div class="work-overlay"><span class="work-tag">Katha</span></div>
-            </div>
-            <div class="work-body">
-              <h3 class="work-title">Village to Cloud</h3>
-              <p class="work-desc">A case study on digitizing cooperative supply chains — from field notes to real-time dashboards, preserving local knowledge in the process.</p>
-              <div class="work-meta"><span>Research</span><span>React</span><span>Maps</span></div>
-            </div>
+          <article class="work-card" data-category="katha" data-index="3">
+            <div class="card-media"><div class="card-gradient g3"></div><div class="card-overlay"><span class="card-cat">Katha</span><span class="card-view">View Project →</span></div></div>
+            <div class="card-info"><h3>Village to Cloud</h3><p>Case study digitizing cooperative supply chains — from field notes to real-time dashboards.</p><div class="card-tags"><span>Research</span><span>React</span><span>Maps</span></div></div>
           </article>
-
-          <article class="work-card" data-category="chitra">
-            <div class="work-image">
-              <div class="work-placeholder chitra-2"><span class="placeholder-label">Illustration</span></div>
-              <div class="work-overlay"><span class="work-tag">Chitra</span></div>
-            </div>
-            <div class="work-body">
-              <h3 class="work-title">Madhubani Interface Kit</h3>
-              <p class="work-desc">Illustrated icon set and decorative borders adapted from Madhubani motifs for storytelling-heavy products and cultural platforms.</p>
-              <div class="work-meta"><span>SVG</span><span>Illustration</span><span>Open Source</span></div>
-            </div>
+          <article class="work-card" data-category="chitra" data-index="4">
+            <div class="card-media"><div class="card-gradient g4"></div><div class="card-overlay"><span class="card-cat">Chitra</span><span class="card-view">View Project →</span></div></div>
+            <div class="card-info"><h3>Madhubani Interface Kit</h3><p>Illustrated icon set and decorative borders adapted from Madhubani for storytelling products.</p><div class="card-tags"><span>SVG</span><span>Illustration</span><span>Open Source</span></div></div>
           </article>
-
-          <article class="work-card" data-category="kala katha">
-            <div class="work-image">
-              <div class="work-placeholder kala-2"><span class="placeholder-label">Product</span></div>
-              <div class="work-overlay"><span class="work-tag">Kala · Katha</span></div>
-            </div>
-            <div class="work-body">
-              <h3 class="work-title">Temple Archives</h3>
-              <p class="work-desc">A digital archive and discovery platform for heritage documentation — search, storytelling, and gentle progressive enhancement.</p>
-              <div class="work-meta"><span>TypeScript</span><span>Elasticsearch</span><span>Accessibility</span></div>
-            </div>
+          <article class="work-card" data-category="kala katha" data-index="5">
+            <div class="card-media"><div class="card-gradient g5"></div><div class="card-overlay"><span class="card-cat">Kala · Katha</span><span class="card-view">View Project →</span></div></div>
+            <div class="card-info"><h3>Temple Archives</h3><p>Digital archive and discovery platform for heritage documentation with progressive enhancement.</p><div class="card-tags"><span>TypeScript</span><span>Search</span><span>A11y</span></div></div>
           </article>
-
-          <article class="work-card" data-category="chitra kala">
-            <div class="work-image">
-              <div class="work-placeholder chitra-3"><span class="placeholder-label">Experience</span></div>
-              <div class="work-overlay"><span class="work-tag">Chitra · Kala</span></div>
-            </div>
-            <div class="work-body">
-              <h3 class="work-title">Diwali Landing</h3>
-              <p class="work-desc">Seasonal campaign experience with particle diyas, soft physics, and a warm color system that feels festive without being loud.</p>
-              <div class="work-meta"><span>Three.js</span><span>GSAP</span><span>Performance</span></div>
-            </div>
+          <article class="work-card" data-category="chitra kala" data-index="6">
+            <div class="card-media"><div class="card-gradient g6"></div><div class="card-overlay"><span class="card-cat">Chitra · Kala</span><span class="card-view">View Project →</span></div></div>
+            <div class="card-info"><h3>Diwali Landing</h3><p>Seasonal campaign with particle diyas, soft physics, and a warm festive color system.</p><div class="card-tags"><span>Three.js</span><span>GSAP</span><span>Performance</span></div></div>
           </article>
         </div>
       </div>
     </section>
-
-    <section id="craft" class="section craft">
+    <section id="craft" class="craft-section">
       <div class="container">
-        <div class="section-header">
-          <div class="section-label">The Craft</div>
-          <h2 class="section-title">Karigari in the digital age</h2>
-          <p class="section-desc">Philosophy shaped by traditional craftsmanship — patience, iteration, and respect for the material.</p>
+        <div class="section-head">
+          <div class="section-label reveal"><span class="section-num">03</span><span>The Craft</span></div>
+          <h2 class="section-title reveal">Karigari in the digital age</h2>
         </div>
-
         <div class="craft-grid">
-          <div class="craft-card">
-            <div class="craft-icon" aria-hidden="true">
-              <svg viewBox="0 0 48 48" fill="none"><path d="M24 6 L28 18 L40 18 L30 26 L34 38 L24 30 L14 38 L18 26 L8 18 L20 18 Z" stroke="currentColor" stroke-width="2" fill="none"/></svg>
-            </div>
+          <div class="craft-item reveal" data-index="1">
+            <div class="craft-icon"><svg viewBox="0 0 48 48" fill="none"><path d="M24 6 L28 18 L40 18 L30 26 L34 38 L24 30 L14 38 L18 26 L8 18 L20 18 Z" stroke="currentColor" stroke-width="2"/></svg></div>
             <h3>Attention to Detail</h3>
-            <p>Like the fine lines of a Madhubani border, every pixel, transition, and edge case receives deliberate care. Craft is visible in the small things.</p>
+            <p>Like the fine lines of a Madhubani border, every pixel and edge case receives deliberate care.</p>
           </div>
-          <div class="craft-card">
-            <div class="craft-icon" aria-hidden="true">
-              <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="16" stroke="currentColor" stroke-width="2"/><path d="M24 12 V24 L32 28" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-            </div>
+          <div class="craft-item reveal" data-index="2">
+            <div class="craft-icon"><svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="16" stroke="currentColor" stroke-width="2"/><path d="M24 12 V24 L32 28" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
             <h3>Iterative Rhythm</h3>
-            <p>Build, observe, refine. The same cycle that turns a rough sketch into a finished painting guides the evolution of products and systems.</p>
+            <p>Build, observe, refine. The same cycle that turns a sketch into a finished painting.</p>
           </div>
-          <div class="craft-card">
-            <div class="craft-icon" aria-hidden="true">
-              <svg viewBox="0 0 48 48" fill="none"><path d="M8 32 Q24 8 40 32" stroke="currentColor" stroke-width="2" fill="none"/><path d="M12 36 Q24 16 36 36" stroke="currentColor" stroke-width="2" fill="none"/><path d="M16 40 Q24 24 32 40" stroke="currentColor" stroke-width="2" fill="none"/></svg>
-            </div>
+          <div class="craft-item reveal" data-index="3">
+            <div class="craft-icon"><svg viewBox="0 0 48 48" fill="none"><path d="M8 32 Q24 8 40 32" stroke="currentColor" stroke-width="2"/><path d="M12 36 Q24 16 36 36" stroke="currentColor" stroke-width="2"/><path d="M16 40 Q24 24 32 40" stroke="currentColor" stroke-width="2"/></svg></div>
             <h3>Material Honesty</h3>
-            <p>Respect the medium. Code has its own grain. Interfaces should feel native to their platform while carrying a distinctive cultural voice.</p>
+            <p>Respect the medium. Code has its own grain. Interfaces should feel native yet distinctive.</p>
           </div>
-          <div class="craft-card">
-            <div class="craft-icon" aria-hidden="true">
-              <svg viewBox="0 0 48 48" fill="none"><rect x="10" y="10" width="28" height="28" rx="2" stroke="currentColor" stroke-width="2"/><path d="M16 24 H32 M24 16 V32" stroke="currentColor" stroke-width="2"/></svg>
-            </div>
+          <div class="craft-item reveal" data-index="4">
+            <div class="craft-icon"><svg viewBox="0 0 48 48" fill="none"><rect x="10" y="10" width="28" height="28" rx="2" stroke="currentColor" stroke-width="2"/><path d="M16 24 H32 M24 16 V32" stroke="currentColor" stroke-width="2"/></svg></div>
             <h3>Accessible by Design</h3>
-            <p>Heritage is for everyone. Inclusive experiences are non-negotiable — from keyboard navigation to color contrast rooted in warm, legible palettes.</p>
+            <p>Heritage is for everyone. Inclusive experiences rooted in warm, legible palettes.</p>
           </div>
         </div>
-
-        <div class="skills-block">
-          <h3 class="skills-title">Tools of the Trade</h3>
-          <div class="skills-list">
-            <span class="skill-pill">TypeScript</span>
-            <span class="skill-pill">React / Next.js</span>
-            <span class="skill-pill">Node.js</span>
-            <span class="skill-pill">CSS & Design Systems</span>
-            <span class="skill-pill">Figma</span>
-            <span class="skill-pill">Accessibility</span>
-            <span class="skill-pill">Performance</span>
-            <span class="skill-pill">Storytelling</span>
+        <div class="skills-strip reveal">
+          <div class="skills-track">
+            <span>TypeScript</span><span>React</span><span>Next.js</span><span>Node.js</span><span>Design Systems</span><span>Figma</span><span>Accessibility</span><span>Performance</span><span>Storytelling</span>
+            <span>TypeScript</span><span>React</span><span>Next.js</span><span>Node.js</span><span>Design Systems</span><span>Figma</span><span>Accessibility</span><span>Performance</span><span>Storytelling</span>
           </div>
         </div>
       </div>
     </section>
-
-    <section id="samvad" class="section samvad">
-      <div class="container narrow">
-        <div class="section-header centered">
-          <div class="section-label">Samvad</div>
-          <h2 class="section-title">Let’s begin a conversation</h2>
-          <p class="section-desc">
-            Whether you have a project in mind, a collaboration idea, or simply want to share
-            thoughts on craft and culture — the door is open. I read every message with care.
-          </p>
-        </div>
-
-        <form class="contact-form" id="contact-form" action="/api/contact" method="POST" novalidate>
-          <div class="form-row">
+    <section id="samvad" class="samvad-section">
+      <div class="container">
+        <div class="samvad-grid">
+          <div class="samvad-info">
+            <div class="section-label reveal"><span class="section-num">04</span><span>Samvad</span></div>
+            <h2 class="section-title reveal">Let's begin a<br/>conversation</h2>
+            <p class="section-desc reveal">Whether a project, collaboration, or simply thoughts on craft and culture — the door is open.</p>
+            <div class="contact-direct reveal">
+              <a href="mailto:hello@example.com" class="direct-link magnetic">hello@example.com</a>
+              <div class="social-row">
+                <a href="https://github.com/rkrishna04" target="_blank" rel="noopener" class="social-btn magnetic">GitHub</a>
+                <a href="#" class="social-btn magnetic">LinkedIn</a>
+              </div>
+            </div>
+          </div>
+          <form class="contact-form reveal" id="contact-form" novalidate>
             <div class="form-group">
               <label for="name">Your Name</label>
-              <input type="text" id="name" name="name" placeholder="How should I address you?" required autocomplete="name" maxlength="120" />
+              <input type="text" id="name" name="name" placeholder="How should I address you?" required maxlength="120" autocomplete="name" />
+              <span class="input-line"></span>
             </div>
             <div class="form-group">
               <label for="email">Email</label>
-              <input type="email" id="email" name="email" placeholder="you@example.com" required autocomplete="email" maxlength="254" />
+              <input type="email" id="email" name="email" placeholder="you@example.com" required maxlength="254" autocomplete="email" />
+              <span class="input-line"></span>
             </div>
-          </div>
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" placeholder="Tell me about the idea, the challenge, or the story..." required maxlength="4000"></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary btn-full">Send with care</button>
-          <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
-          <p class="form-note">Messages are rate-limited and delivered via a single serverless path. Configure RESEND_API_KEY + CONTACT_TO_EMAIL on Vercel for live delivery.</p>
-        </form>
-
-        <div class="contact-alt">
-          <p>Or reach me directly</p>
-          <div class="contact-links">
-            <a href="mailto:hello@example.com" class="contact-link">hello@example.com</a>
-            <a href="https://github.com/rkrishna04" target="_blank" rel="noopener" class="contact-link">GitHub</a>
-            <a href="#" class="contact-link">LinkedIn</a>
-          </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="4" placeholder="Tell me about the idea, the challenge, or the story..." required maxlength="4000"></textarea>
+              <span class="input-line"></span>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full magnetic"><span>Send with care</span></button>
+            <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+          </form>
         </div>
       </div>
     </section>
   </main>
-
   <footer class="site-footer">
     <div class="container footer-inner">
       <div class="footer-brand">
         <span class="logo-text">Krishna</span>
-        <p>Crafted with respect for tradition and a love for modern tools.</p>
+        <p>Crafted with respect for tradition<br/>and a love for modern tools.</p>
       </div>
       <div class="footer-meta">
         <p>© <span id="year"></span> · Built with karigari</p>
-        <p class="footer-note">Inspired by Warli, Madhubani, Kalamkari & temple jali</p>
+        <p class="footer-note">Warli · Madhubani · Kalamkari · Jali</p>
       </div>
     </div>
-    <div class="footer-border" aria-hidden="true"></div>
+    <div class="footer-border"></div>
   </footer>
-
   <script src="js/main.js"></script>
 </body>
 </html>
