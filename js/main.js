@@ -1,9 +1,11 @@
 /**
- * Heritage Portfolio — interactions
+ * Heritage Portfolio — client interactions
+ * Contact path talks to /api/contact (serverless).
+ * No business rules live here; only UX + transport.
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Year in footer
+  // Year
   const yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
@@ -16,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 
-  // Mobile nav toggle
+  // Mobile nav
   const toggle = document.getElementById('nav-toggle');
   const nav = document.getElementById('nav');
   if (toggle && nav) {
@@ -24,7 +26,6 @@ document.addEventListener('DOMContentLoaded', () => {
       toggle.classList.toggle('active');
       nav.classList.toggle('open');
     });
-    // Close on link click
     nav.querySelectorAll('.nav-link').forEach(link => {
       link.addEventListener('click', () => {
         toggle.classList.remove('active');
@@ -33,10 +34,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Active nav link on scroll
+  // Active nav link
   const sections = document.querySelectorAll('section[id]');
   const navLinks = document.querySelectorAll('.nav-link');
-
   const highlightNav = () => {
     const scrollY = window.scrollY + 100;
     sections.forEach(section => {
@@ -46,9 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (scrollY >= top && scrollY < top + height) {
         navLinks.forEach(link => {
           link.classList.remove('active');
-          if (link.getAttribute('href') === `#${id}`) {
-            link.classList.add('active');
-          }
+          if (link.getAttribute('href') === `#${id}`) link.classList.add('active');
         });
       }
     });
@@ -58,48 +56,103 @@ document.addEventListener('DOMContentLoaded', () => {
   // Works filter
   const filterBtns = document.querySelectorAll('.filter-btn');
   const cards = document.querySelectorAll('.work-card');
-
   filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
-      // Active state
       filterBtns.forEach(b => {
         b.classList.remove('active');
         b.setAttribute('aria-selected', 'false');
       });
       btn.classList.add('active');
       btn.setAttribute('aria-selected', 'true');
-
       const filter = btn.dataset.filter;
-
       cards.forEach(card => {
         const cats = card.dataset.category || '';
-        if (filter === 'all' || cats.includes(filter)) {
-          card.classList.remove('hidden');
-        } else {
-          card.classList.add('hidden');
-        }
+        if (filter === 'all' || cats.includes(filter)) card.classList.remove('hidden');
+        else card.classList.add('hidden');
       });
     });
   });
 
-  // Simple form handler (demo)
+  // Contact form — real transport
   const form = document.getElementById('contact-form');
   if (form) {
-    form.addEventListener('submit', (e) => {
+    form.addEventListener('submit', async (e) => {
       e.preventDefault();
       const btn = form.querySelector('button[type="submit"]');
+      const statusEl = document.getElementById('form-status');
       const original = btn.textContent;
-      btn.textContent = 'Message received · धन्यवाद';
+
+      const name = form.name.value.trim();
+      const email = form.email.value.trim();
+      const message = form.message.value.trim();
+
+      if (name.length < 2 || !email.includes('@') || message.length < 10) {
+        if (statusEl) {
+          statusEl.textContent = 'Please fill all fields with care.';
+          statusEl.dataset.state = 'error';
+        }
+        return;
+      }
+
       btn.disabled = true;
-      setTimeout(() => {
+      btn.textContent = 'Sending…';
+      if (statusEl) {
+        statusEl.textContent = '';
+        statusEl.dataset.state = '';
+      }
+
+      const idempotencyKey = crypto.randomUUID ? crypto.randomUUID() : `idemp-${Date.now()}`;
+
+      try {
+        const res = await fetch('/api/contact', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Idempotency-Key': idempotencyKey,
+          },
+          body: JSON.stringify({ name, email, message, idempotencyKey }),
+        });
+
+        const data = await res.json().catch(() => ({}));
+
+        if (res.ok || res.status === 202) {
+          btn.textContent = 'Message received · धन्यवाद';
+          if (statusEl) {
+            statusEl.textContent = data.message || 'Thank you. I will respond with care.';
+            statusEl.dataset.state = 'ok';
+          }
+          form.reset();
+          setTimeout(() => {
+            btn.textContent = original;
+            btn.disabled = false;
+          }, 3200);
+        } else if (res.status === 429) {
+          btn.textContent = original;
+          btn.disabled = false;
+          if (statusEl) {
+            statusEl.textContent = data.message || 'Too many messages. Please wait a minute.';
+            statusEl.dataset.state = 'error';
+          }
+        } else {
+          btn.textContent = original;
+          btn.disabled = false;
+          if (statusEl) {
+            statusEl.textContent = data.message || 'Could not send. Please try again or email directly.';
+            statusEl.dataset.state = 'error';
+          }
+        }
+      } catch (err) {
         btn.textContent = original;
         btn.disabled = false;
-        form.reset();
-      }, 2800);
+        if (statusEl) {
+          statusEl.textContent = 'Network error. Please try again or use the email link below.';
+          statusEl.dataset.state = 'error';
+        }
+      }
     });
   }
 
-  // Gentle reveal on scroll for cards
+  // Gentle reveal
   const revealEls = document.querySelectorAll('.work-card, .craft-card');
   if ('IntersectionObserver' in window) {
     const io = new IntersectionObserver(
@@ -114,7 +167,6 @@ document.addEventListener('DOMContentLoaded', () => {
       },
       { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
     );
-
     revealEls.forEach(el => {
       el.style.opacity = '0';
       el.style.transform = 'translateY(24px)';
