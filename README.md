@@ -1,34 +1,19 @@
-# Rathwa Krishnakumar — Portfolio
+# Heritage Portfolio
 
-Dark heritage systems-engineering portfolio.
+Warm interactive developer portfolio inspired by traditional Indian aesthetics.
 
-**Positioning:** Where Bharatiya Heritage Meets Five-Nines Systems Engineering
+**Palette:** terracotta, ochre, indigo, forest, gold on ivory/parchment
 
-## Design
+**Sections:** Namaste · Works (Chitra / Kala / Katha) · Craft · Samvad
 
-- Deep navy / black canvas
-- Gold ornate frames and borders
-- Bento grid project layout
-- Live system telemetry panel
-- Interactive cursor, magnetic buttons, 3D card tilt, scroll reveals
-
-## Projects featured
-
-- **SiddhiPatra** — Automated Exam Generation
-- **KutumSetu** — Housing Society Management
-- **EduVault** — Encrypted Student Lifecycle Management
-- **Western Railway WRSIMS** — Railway Systems Management
+**Interactions:** custom cursor, magnetic buttons, 3D card tilt, scroll reveals, animated Warli, filter transitions
 
 ## Deploy
 
-Import on Vercel (Framework: Other). Optional env for contact form:
+Import on Vercel (Framework: Other). Optional contact env:
 
 ```
 RESEND_API_KEY=
 CONTACT_TO_EMAIL=
 CONTACT_FROM_EMAIL=
 ```
-
-## Stack
-
-Static HTML / CSS / vanilla JS · Vercel Serverless contact endpoint
