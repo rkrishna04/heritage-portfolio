@@ -3,260 +3,188 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Rathwa Krishnakumar — Where Bharatiya Heritage Meets Five-Nines Systems Engineering" />
-  <title>Rathwa Krishnakumar · Systems Engineer</title>
+  <meta name="description" content="Krishna — Developer portfolio blending traditional Indian heritage with dynamic modern interaction." />
+  <title>Krishna · Heritage Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Teko:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Yatra+One&family=Poppins:wght@300;400;500;600;700&family=Teko:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🪷</text></svg>" />
 </head>
 <body>
   <div class="cursor" id="cursor"></div>
   <div class="cursor-follower" id="cursor-follower"></div>
-  <div class="progress-bar" id="progress-bar"></div>
-
-  <div class="page-frame" aria-hidden="true">
-    <div class="frame-edge top"></div>
-    <div class="frame-edge bottom"></div>
-    <div class="frame-edge left"></div>
-    <div class="frame-edge right"></div>
-    <div class="frame-corner tl"></div>
-    <div class="frame-corner tr"></div>
-    <div class="frame-corner bl"></div>
-    <div class="frame-corner br"></div>
+  <div class="bg-motifs" aria-hidden="true">
+    <div class="motif motif-1"></div>
+    <div class="motif motif-2"></div>
+    <div class="motif motif-3"></div>
+    <div class="motif motif-4"></div>
   </div>
-
+  <div class="progress-bar" id="progress-bar"></div>
   <header class="site-header" id="header">
     <div class="container header-inner">
-      <a href="#home" class="logo magnetic">
-        <span class="logo-text">Rathwa Krishnakumar</span>
+      <a href="#namaste" class="logo magnetic">
+        <span class="logo-mark">
+          <svg width="32" height="32" viewBox="0 0 36 36" fill="none">
+            <circle cx="18" cy="18" r="15" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M18 8 L22 16 L18 14 L14 16 Z" fill="currentColor"/>
+            <circle cx="18" cy="20" r="2.5" fill="currentColor"/>
+          </svg>
+        </span>
+        <span class="logo-text">Krishna</span>
       </a>
       <nav class="nav" id="nav">
-        <a href="#home" class="nav-link active">Home</a>
-        <a href="#projects" class="nav-link">Projects</a>
-        <a href="#about" class="nav-link">About</a>
-        <a href="#contact" class="nav-link">Contact</a>
+        <a href="#namaste" class="nav-link"><span>Namaste</span></a>
+        <a href="#works" class="nav-link"><span>Works</span></a>
+        <a href="#craft" class="nav-link"><span>Craft</span></a>
+        <a href="#samvad" class="nav-link"><span>Samvad</span></a>
       </nav>
-      <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
-        <span></span><span></span>
-      </button>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Menu"><span></span><span></span></button>
     </div>
   </header>
-
   <main>
-    <section id="home" class="hero">
-      <div class="hero-mandala" aria-hidden="true"></div>
-      <div class="container hero-layout">
-        <div class="hero-copy">
-          <p class="hero-eyebrow reveal">Bharatiya Systems · Digital Karigar</p>
+    <section id="namaste" class="hero">
+      <div class="hero-bg"></div>
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-eyebrow reveal"><span class="eyebrow-line"></span><span>नमस्ते · Digital Karigar</span></div>
           <h1 class="hero-title">
-            <span class="title-line reveal"><span>Where Bharatiya Heritage</span></span>
-            <span class="title-line reveal"><span>Meets Five-Nines</span></span>
-            <span class="title-line reveal accent"><span>Systems Engineering</span></span>
+            <span class="title-line reveal"><span>I craft digital</span></span>
+            <span class="title-line reveal"><span>experiences with the</span></span>
+            <span class="title-line reveal accent"><span>soul of tradition</span></span>
           </h1>
-          <p class="hero-lead reveal">
-            Building resilient platforms at the intersection of cultural craft and production-grade reliability.
-          </p>
-          <div class="hero-actions reveal">
-            <a href="#projects" class="btn btn-gold magnetic">View Projects</a>
-            <a href="#contact" class="btn btn-ghost magnetic">Start a Conversation</a>
+          <p class="hero-lead reveal">Code as karigari. Interfaces as living craft. Blending modern engineering with the warmth and rhythm of Indian heritage.</p>
+          <div class="hero-cta reveal">
+            <a href="#works" class="btn btn-primary magnetic"><span>Explore Collection</span></a>
+            <a href="#samvad" class="btn btn-outline magnetic"><span>Start Samvad</span></a>
           </div>
         </div>
-
-        <aside class="telemetry-panel reveal">
-          <div class="panel-header">
-            <span class="panel-title">Live System Telemetry</span>
-            <span class="panel-dots"><i></i><i></i><i></i></span>
+        <div class="hero-visual reveal">
+          <div class="visual-card">
+            <div class="visual-glow"></div>
+            <svg class="warli-svg" viewBox="0 0 340 300" fill="none">
+              <circle cx="270" cy="45" r="20" stroke="#C9A227" stroke-width="2" fill="rgba(201,162,39,0.1)"/>
+              <path d="M55 165 L100 110 L145 165 Z" stroke="#3D2B1F" stroke-width="2" fill="#F5E6C8"/>
+              <rect x="72" y="165" width="56" height="50" stroke="#3D2B1F" stroke-width="2" fill="#E8D5B5"/>
+              <rect x="90" y="182" width="20" height="33" fill="#3D2B1F"/>
+              <line x1="210" y1="215" x2="210" y2="145" stroke="#1B4D3E" stroke-width="3.5"/>
+              <circle cx="210" cy="128" r="32" fill="#2E7D4F" opacity="0.9"/>
+              <g class="dancers" stroke="#3D2B1F" stroke-width="2.2" fill="none">
+                <g class="dancer d1"><circle cx="48" cy="200" r="7"/><line x1="48" y1="207" x2="48" y2="240"/><line x1="48" y1="218" x2="30" y2="230"/><line x1="48" y1="218" x2="66" y2="230"/><line x1="48" y1="240" x2="36" y2="262"/><line x1="48" y1="240" x2="60" y2="262"/></g>
+                <g class="dancer d2"><circle cx="115" cy="205" r="7"/><line x1="115" y1="212" x2="115" y2="245"/><line x1="115" y1="223" x2="97" y2="235"/><line x1="115" y1="223" x2="133" y2="235"/><line x1="115" y1="245" x2="103" y2="267"/><line x1="115" y1="245" x2="127" y2="267"/></g>
+                <g class="dancer d3"><circle cx="170" cy="202" r="7"/><line x1="170" y1="209" x2="170" y2="242"/><line x1="170" y1="220" x2="152" y2="232"/><line x1="170" y1="220" x2="188" y2="232"/><line x1="170" y1="242" x2="158" y2="264"/><line x1="170" y1="242" x2="182" y2="264"/></g>
+              </g>
+              <path d="M20 275 Q170 255 320 275" stroke="#C65D3B" stroke-width="1.5" opacity="0.5"/>
+            </svg>
+            <div class="card-corners"><span></span><span></span><span></span><span></span></div>
           </div>
-          <div class="panel-body">
-            <div class="status-row">
-              <span class="status-label">SYSTEM STATUS</span>
-              <span class="status-value active">ACTIVE</span>
-            </div>
-            <div class="status-row">
-              <span class="status-label">Pulse Status</span>
-              <span class="pulse-dot"></span>
-            </div>
-            <div class="metrics-row">
-              <div class="metric">
-                <span class="metric-label">Uptime</span>
-                <span class="metric-value">95%</span>
-                <div class="metric-bar"><div class="metric-fill" style="width:95%"></div></div>
-              </div>
-              <div class="metric">
-                <span class="metric-label">Server Load</span>
-                <span class="metric-value">18%</span>
-                <div class="metric-bar"><div class="metric-fill load" style="width:18%"></div></div>
-              </div>
-            </div>
-            <div class="sub-metrics">
-              <span>100%, 75%</span>
-              <span>18%, 86%, 15%</span>
-            </div>
-          </div>
-        </aside>
-      </div>
-    </section>
-
-    <section id="projects" class="projects-section">
-      <div class="container">
-        <div class="section-head reveal">
-          <h2 class="section-title">Bento Grid</h2>
-          <p class="section-desc">Modern software engineering project cards · clean responsive enterprise layout</p>
-        </div>
-
-        <div class="bento-grid">
-          <article class="bento-card card-siddhi reveal" data-index="1">
-            <div class="card-ornament"></div>
-            <div class="card-icon-row">
-              <div class="icon-box">
-                <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="18" stroke="currentColor" stroke-width="1.5"/><path d="M16 24h16M24 16v16" stroke="currentColor" stroke-width="1.5"/></svg>
-              </div>
-              <div class="icon-box">
-                <svg viewBox="0 0 48 48" fill="none"><rect x="10" y="8" width="28" height="32" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M16 16h16M16 22h12M16 28h14" stroke="currentColor" stroke-width="1.5"/></svg>
-              </div>
-            </div>
-            <h3>SiddhiPatra</h3>
-            <p>Automated Exam Generation</p>
-            <div class="card-tags"><span class="tag">AI</span><span class="tag">Full-Stack</span></div>
-            <a href="#" class="card-link">Explore →</a>
-          </article>
-
-          <article class="bento-card card-kutum reveal" data-index="2">
-            <div class="card-ornament"></div>
-            <div class="card-visual">
-              <div class="iso-buildings">
-                <div class="iso-block b1"></div>
-                <div class="iso-block b2"></div>
-                <div class="iso-block b3"></div>
-              </div>
-            </div>
-            <h3>KutumSetu</h3>
-            <p>Housing Society Management</p>
-            <div class="card-tags"><span class="tag">3D</span><span class="tag">Full-Stack</span></div>
-            <a href="#" class="card-link">Explore →</a>
-          </article>
-
-          <article class="bento-card card-edu reveal" data-index="3">
-            <div class="card-ornament"></div>
-            <div class="card-icon-row edu-icons">
-              <div class="icon-box"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2L3 7v6c0 5 4 9 9 10 5-1 9-5 9-10V7l-9-5z" stroke="currentColor" stroke-width="1.5"/></svg></div>
-              <div class="icon-box"><svg viewBox="0 0 24 24" fill="none"><rect x="5" y="11" width="14" height="10" rx="1" stroke="currentColor" stroke-width="1.5"/><path d="M8 11V8a4 4 0 018 0v3" stroke="currentColor" stroke-width="1.5"/></svg></div>
-              <div class="icon-box"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="1.5"/><path d="M4 20c0-4 3.5-7 8-7s8 3 8 7" stroke="currentColor" stroke-width="1.5"/></svg></div>
-              <div class="icon-box"><svg viewBox="0 0 24 24" fill="none"><path d="M4 19.5A2.5 2.5 0 016.5 17H20" stroke="currentColor" stroke-width="1.5"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z" stroke="currentColor" stroke-width="1.5"/></svg></div>
-            </div>
-            <h3>EduVault</h3>
-            <p>Encrypted Student Lifecycle Management</p>
-            <div class="card-tags"><span class="tag">AI</span><span class="tag">Full-Stack</span></div>
-            <a href="#" class="card-link">Explore →</a>
-          </article>
-
-          <article class="bento-card card-rail reveal" data-index="4">
-            <div class="card-ornament"></div>
-            <div class="rail-visual">
-              <svg class="train-icon" viewBox="0 0 64 48" fill="none">
-                <rect x="4" y="14" width="48" height="20" rx="3" stroke="currentColor" stroke-width="1.5"/>
-                <circle cx="16" cy="36" r="5" stroke="currentColor" stroke-width="1.5"/>
-                <circle cx="40" cy="36" r="5" stroke="currentColor" stroke-width="1.5"/>
-                <path d="M52 18h8v12h-8" stroke="currentColor" stroke-width="1.5"/>
-                <rect x="10" y="18" width="10" height="8" rx="1" stroke="currentColor" stroke-width="1"/>
-                <rect x="24" y="18" width="10" height="8" rx="1" stroke="currentColor" stroke-width="1"/>
-                <rect x="38" y="18" width="8" height="8" rx="1" stroke="currentColor" stroke-width="1"/>
-              </svg>
-              <div class="rail-chart">
-                <div class="chart-bar" style="height:40%"></div>
-                <div class="chart-bar" style="height:70%"></div>
-                <div class="chart-bar" style="height:55%"></div>
-                <div class="chart-bar" style="height:85%"></div>
-                <div class="chart-bar" style="height:60%"></div>
-              </div>
-            </div>
-            <h3>Western Railway WRSIMS</h3>
-            <p>Railway Systems Management</p>
-            <div class="card-tags"><span class="tag">AI</span><span class="tag">Full-Stack</span></div>
-            <a href="#" class="card-link">Explore →</a>
-          </article>
         </div>
       </div>
+      <div class="scroll-indicator"><div class="scroll-mouse"><div class="scroll-wheel"></div></div><span>Scroll to explore</span></div>
     </section>
-
-    <section id="about" class="about-section">
+    <section class="intro-section">
       <div class="container">
-        <div class="about-grid">
-          <div class="about-copy">
-            <p class="section-eyebrow reveal">About</p>
-            <h2 class="section-title reveal">Karigari meets<br/>production systems</h2>
-            <div class="about-text reveal">
-              <p>I design and build systems that must stay correct under load, partition, and time — the same discipline that once shaped temple stone and manuscript ink.</p>
-              <p>From railway operations to student lifecycle platforms, the work sits at the boundary of cultural context and five-nines engineering.</p>
-            </div>
-            <div class="skill-pills reveal">
-              <span>TypeScript</span><span>React / Next.js</span><span>Node.js</span>
-              <span>System Design</span><span>Distributed Systems</span><span>AI Integration</span>
-            </div>
-          </div>
-          <div class="about-stats reveal">
-            <div class="stat-card">
-              <span class="stat-num">4+</span>
-              <span class="stat-label">Production Systems</span>
-            </div>
-            <div class="stat-card">
-              <span class="stat-num">99.9%</span>
-              <span class="stat-label">Target Reliability</span>
-            </div>
-            <div class="stat-card">
-              <span class="stat-num">∞</span>
-              <span class="stat-label">Attention to Craft</span>
+        <div class="intro-grid">
+          <div class="intro-label reveal"><span class="section-num">01</span><span>The Story</span></div>
+          <div class="intro-body">
+            <h2 class="intro-title reveal">A warm welcome,<br/>not a résumé</h2>
+            <div class="intro-text reveal">
+              <p>In the tradition of the <em>karigar</em> — the artisan who pours quiet attention into every detail — I approach software as a living craft.</p>
+              <p>Lines of code are threads. Systems are looms. Every interface is a place where people and intention meet.</p>
             </div>
           </div>
         </div>
       </div>
     </section>
-
-    <section id="contact" class="contact-section">
+    <section id="works" class="works-section">
       <div class="container">
-        <div class="contact-grid">
-          <div class="contact-info">
-            <p class="section-eyebrow reveal">Contact</p>
-            <h2 class="section-title reveal">Open for collaboration</h2>
-            <p class="contact-desc reveal">Projects, systems design, or conversations at the intersection of heritage and engineering.</p>
-            <div class="contact-links reveal">
-              <a href="mailto:hello@rathwakrishnakumar.com" class="contact-email magnetic">hello@rathwakrishnakumar.com</a>
-              <div class="social-links">
+        <div class="section-head">
+          <div class="section-label reveal"><span class="section-num">02</span><span>The Collection</span></div>
+          <h2 class="section-title reveal">Selected Works</h2>
+          <p class="section-desc reveal">Chitra for visual form · Kala for systems · Katha for stories</p>
+        </div>
+        <div class="filter-row reveal">
+          <button class="filter-chip active" data-filter="all"><span>All</span></button>
+          <button class="filter-chip" data-filter="chitra"><span>Chitra</span></button>
+          <button class="filter-chip" data-filter="kala"><span>Kala</span></button>
+          <button class="filter-chip" data-filter="katha"><span>Katha</span></button>
+        </div>
+        <div class="works-grid" id="works-grid">
+          <article class="work-card" data-category="chitra kala" data-index="1">
+            <div class="card-media"><div class="card-gradient g1"></div><div class="card-overlay"><span class="card-cat">Chitra · Kala</span><span class="card-view">View Project →</span></div></div>
+            <div class="card-info"><h3>Rangoli Commerce</h3><p>Festival-ready e-commerce with generative patterns and tactile micro-interactions.</p><div class="card-tags"><span>Next.js</span><span>Motion</span></div></div>
+          </article>
+          <article class="work-card" data-category="kala" data-index="2">
+            <div class="card-media"><div class="card-gradient g2"></div><div class="card-overlay"><span class="card-cat">Kala</span><span class="card-view">View Project →</span></div></div>
+            <div class="card-info"><h3>Jali Design Tokens</h3><p>Token library bringing geometric lattice patterns into modern product interfaces.</p><div class="card-tags"><span>Figma</span><span>Storybook</span></div></div>
+          </article>
+          <article class="work-card" data-category="katha" data-index="3">
+            <div class="card-media"><div class="card-gradient g3"></div><div class="card-overlay"><span class="card-cat">Katha</span><span class="card-view">View Project →</span></div></div>
+            <div class="card-info"><h3>Village to Cloud</h3><p>Case study digitizing cooperative supply chains — from field notes to dashboards.</p><div class="card-tags"><span>Research</span><span>React</span></div></div>
+          </article>
+          <article class="work-card" data-category="chitra" data-index="4">
+            <div class="card-media"><div class="card-gradient g4"></div><div class="card-overlay"><span class="card-cat">Chitra</span><span class="card-view">View Project →</span></div></div>
+            <div class="card-info"><h3>Madhubani Interface Kit</h3><p>Illustrated icon set and decorative borders adapted from Madhubani.</p><div class="card-tags"><span>SVG</span><span>Open Source</span></div></div>
+          </article>
+          <article class="work-card" data-category="kala katha" data-index="5">
+            <div class="card-media"><div class="card-gradient g5"></div><div class="card-overlay"><span class="card-cat">Kala · Katha</span><span class="card-view">View Project →</span></div></div>
+            <div class="card-info"><h3>Temple Archives</h3><p>Digital archive for heritage documentation with progressive enhancement.</p><div class="card-tags"><span>TypeScript</span><span>A11y</span></div></div>
+          </article>
+          <article class="work-card" data-category="chitra kala" data-index="6">
+            <div class="card-media"><div class="card-gradient g6"></div><div class="card-overlay"><span class="card-cat">Chitra · Kala</span><span class="card-view">View Project →</span></div></div>
+            <div class="card-info"><h3>Diwali Landing</h3><p>Seasonal campaign with particle diyas and a warm festive color system.</p><div class="card-tags"><span>Three.js</span><span>GSAP</span></div></div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section id="craft" class="craft-section">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-label reveal"><span class="section-num">03</span><span>The Craft</span></div>
+          <h2 class="section-title reveal">Karigari in the digital age</h2>
+        </div>
+        <div class="craft-grid">
+          <div class="craft-item reveal" data-index="1"><div class="craft-icon"><svg viewBox="0 0 48 48" fill="none"><path d="M24 6 L28 18 L40 18 L30 26 L34 38 L24 30 L14 38 L18 26 L8 18 L20 18 Z" stroke="currentColor" stroke-width="2"/></svg></div><h3>Attention to Detail</h3><p>Like the fine lines of a Madhubani border, every pixel and edge case receives deliberate care.</p></div>
+          <div class="craft-item reveal" data-index="2"><div class="craft-icon"><svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="16" stroke="currentColor" stroke-width="2"/><path d="M24 12 V24 L32 28" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div><h3>Iterative Rhythm</h3><p>Build, observe, refine. The same cycle that turns a sketch into a finished painting.</p></div>
+          <div class="craft-item reveal" data-index="3"><div class="craft-icon"><svg viewBox="0 0 48 48" fill="none"><path d="M8 32 Q24 8 40 32" stroke="currentColor" stroke-width="2"/><path d="M12 36 Q24 16 36 36" stroke="currentColor" stroke-width="2"/></svg></div><h3>Material Honesty</h3><p>Respect the medium. Code has its own grain. Interfaces should feel native yet distinctive.</p></div>
+          <div class="craft-item reveal" data-index="4"><div class="craft-icon"><svg viewBox="0 0 48 48" fill="none"><rect x="10" y="10" width="28" height="28" rx="2" stroke="currentColor" stroke-width="2"/><path d="M16 24 H32 M24 16 V32" stroke="currentColor" stroke-width="2"/></svg></div><h3>Accessible by Design</h3><p>Heritage is for everyone. Inclusive experiences rooted in warm, legible palettes.</p></div>
+        </div>
+        <div class="skills-strip reveal"><div class="skills-track"><span>TypeScript</span><span>React</span><span>Next.js</span><span>Node.js</span><span>Design Systems</span><span>Figma</span><span>Accessibility</span><span>Performance</span><span>Storytelling</span><span>TypeScript</span><span>React</span><span>Next.js</span><span>Node.js</span><span>Design Systems</span><span>Figma</span><span>Accessibility</span><span>Performance</span><span>Storytelling</span></div></div>
+      </div>
+    </section>
+    <section id="samvad" class="samvad-section">
+      <div class="container">
+        <div class="samvad-grid">
+          <div class="samvad-info">
+            <div class="section-label reveal"><span class="section-num">04</span><span>Samvad</span></div>
+            <h2 class="section-title reveal">Let's begin a<br/>conversation</h2>
+            <p class="section-desc reveal">Whether a project, collaboration, or thoughts on craft and culture — the door is open.</p>
+            <div class="contact-direct reveal">
+              <a href="mailto:hello@example.com" class="direct-link magnetic">hello@example.com</a>
+              <div class="social-row">
                 <a href="https://github.com/rkrishna04" target="_blank" rel="noopener" class="social-btn magnetic">GitHub</a>
                 <a href="#" class="social-btn magnetic">LinkedIn</a>
               </div>
             </div>
           </div>
           <form class="contact-form reveal" id="contact-form" novalidate>
-            <div class="form-group">
-              <label for="name">Name</label>
-              <input type="text" id="name" name="name" placeholder="Your name" required maxlength="120" />
-            </div>
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" placeholder="you@example.com" required maxlength="254" />
-            </div>
-            <div class="form-group">
-              <label for="message">Message</label>
-              <textarea id="message" name="message" rows="4" placeholder="Tell me about the system or idea..." required maxlength="4000"></textarea>
-            </div>
-            <button type="submit" class="btn btn-gold btn-full magnetic"><span>Send Message</span></button>
+            <div class="form-group"><label for="name">Your Name</label><input type="text" id="name" name="name" placeholder="How should I address you?" required maxlength="120" /><span class="input-line"></span></div>
+            <div class="form-group"><label for="email">Email</label><input type="email" id="email" name="email" placeholder="you@example.com" required maxlength="254" /><span class="input-line"></span></div>
+            <div class="form-group"><label for="message">Message</label><textarea id="message" name="message" rows="4" placeholder="Tell me about the idea..." required maxlength="4000"></textarea><span class="input-line"></span></div>
+            <button type="submit" class="btn btn-primary btn-full magnetic"><span>Send with care</span></button>
             <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
           </form>
         </div>
       </div>
     </section>
   </main>
-
   <footer class="site-footer">
     <div class="container footer-inner">
-      <span class="footer-brand">Rathwa Krishnakumar</span>
-      <span class="footer-copy">© <span id="year"></span> · Bharatiya Systems Engineering</span>
+      <div class="footer-brand"><span class="logo-text">Krishna</span><p>Crafted with respect for tradition<br/>and a love for modern tools.</p></div>
+      <div class="footer-meta"><p>© <span id="year"></span> · Built with karigari</p><p class="footer-note">Warli · Madhubani · Kalamkari · Jali</p></div>
     </div>
+    <div class="footer-border"></div>
   </footer>
-
   <script src="js/main.js"></script>
 </body>
 </html>
